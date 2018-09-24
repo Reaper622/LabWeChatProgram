@@ -1,0 +1,1 @@
+INSERT INTO `student` (`open_id`, `student_id`, `student_name`) VALUES ('abc123',  123, 'abc');
