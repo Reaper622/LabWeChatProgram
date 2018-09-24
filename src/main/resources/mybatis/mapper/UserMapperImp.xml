@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="org.mislab.mislabwechat.dao.UserMapper">
+    <resultMap id="user" type="org.mislab.mislabwechat.entity.po.User">
+        <id property="id" column="id"/>
+        <result property="studentId" column="student_id"/>
+        <result property="studentName" column="student_name"/>
+        <result property="openId" column="open_id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="updateTime"/>
+    </resultMap>
+<sql id="user_columns">
+    student_id,student_name,open_id
+</sql>
+    <insert id="insertUser" parameterType="org.mislab.mislabwechat.entity.po.User" keyProperty="id" useGeneratedKeys="true">
+        INSERT INTO "user" (open_id, student_id, student_name, id, creat_time)
+        VALUES (#{opdenId},#{studentId},#{studentName},#{createTime})
+    </insert>
+
+    <select id="findUserByOpenId" parameterType="java.lang.String" resultMap="user">
+        SELECT <include refid="user_columns"/>
+        FROM "user"
+        WHERE open_id = #{openId}
+    </select>
+</mapper>
