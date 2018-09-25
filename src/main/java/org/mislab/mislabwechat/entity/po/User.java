@@ -2,13 +2,18 @@ package org.mislab.mislabwechat.entity.po;
 
 import lombok.Data;
 
+import java.util.Date;
+
 /**
  * 用户类
- * openId,学号,姓名,权限(0为无，1为有)
+ * openId,学号,姓名
  */
 @Data
 public class User {
+    private int id;
     private String openId;
     private String studentId;
     private String studentName;
+    private Date createTime;
+    private Date updateTime;
 }

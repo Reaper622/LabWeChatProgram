@@ -11,16 +11,16 @@
         <result property="updateTime" column="updateTime"/>
     </resultMap>
 <sql id="user_columns">
-    student_id,student_name,open_id
+    open_id, student_id, student_name, id, create_time, update_time
 </sql>
     <insert id="insertUser" parameterType="org.mislab.mislabwechat.entity.po.User" keyProperty="id" useGeneratedKeys="true">
-        INSERT INTO "user" (open_id, student_id, student_name, id, creat_time)
-        VALUES (#{opdenId},#{studentId},#{studentName},#{createTime})
+        INSERT INTO user (open_id, student_id, student_name, create_time, update_time)
+        VALUES (#{openId}, #{studentId}, #{studentName}, CURRENT_TIME, CURRENT_TIME)
     </insert>
 
     <select id="findUserByOpenId" parameterType="java.lang.String" resultMap="user">
         SELECT <include refid="user_columns"/>
-        FROM "user"
+        FROM user
         WHERE open_id = #{openId}
     </select>
 </mapper>
