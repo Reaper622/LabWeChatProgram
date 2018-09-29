@@ -1,0 +1,51 @@
+<!--pages/home/home.wxml-->
+<view class='topContainer'>
+  <swiper class='topImgContainer' indicator-dots='true' indicator-color='#efefef' indicator-active-color='#518FF5' interval='3000' duration='2000' autoplay='autoplay'>
+    <block
+    wx:for="{{topImgs}}"
+    wx:for-item="img"
+    wx:key="{{img.id}}"
+    >
+    <swiper-item>
+      <image src="{{img.url}}" class='topImg'></image>
+    </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class='functionContainer'>
+  <view class='functionItem' id='recruitFunction' data-url="recruit/recruit" bindtap='tapToRedirect'>
+  <image src='../../images/home/functionImg/recruit.png' ></image>
+  <text>招新</text>
+  </view>
+  <view class='functionItem' id='todo1Function'>
+    <image src='../../images/home/functionImg/todo.png' ></image>
+    <text>敬请期待</text>
+  </view>
+  <view class='functionItem' id='todo2Function'>
+    <image src='../../images/home/functionImg/todo.png' ></image>
+    <text>敬请期待</text>
+  </view>
+  <view class='functionItem' id='moreFunction'>
+    <image src='../../images/home/functionImg/more.png' ></image>
+    <text>更多 </text>
+  </view>
+</view>
+
+<view class='directionTitle'>
+</view>
+
+<view class='directionContainer'>
+  <view class='directionItem' >
+    <image src='../../images/recruit/web.png'></image>
+    <text>前端</text>
+  </view>
+  <view class='directionItem' id='javaItem'>
+    <image src='../../images/recruit/java.png'></image>
+    <text>后台</text>
+  </view>
+  <view class='directionItem'>
+    <image src='../../images/recruit/andriod.png'></image>
+    <text>安卓</text>
+  </view>
+</view>

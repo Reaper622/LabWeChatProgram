@@ -1,0 +1,49 @@
+<!--pages/recruit/recruit.wxml-->
+<i-row i-class="topBar">
+  <block wx:for="{{directions}}" wx:for-item="direction" wx:key="{{direction.id}}">
+    <i-col span="3" offset="1" ><image  src="{{direction.url}}" class="{{major == direction.title ? 'iconContainerOn' : 'iconContainerNormal'}}"   data-title="{{direction.title}}"  data-word="{{direction.word}}"bindtap="bindDirection"></image></i-col>
+  </block>
+  <i-col span="3" offset="8" i-class="directionWord">{{majorWord}}</i-col>
+</i-row>
+<view class='noticeBoard'>
+  <board   url="{{board.url}}" title="{{board.title}}" time="{{board.time}}" address="{{board.address}}"  ></board>
+</view>
+<view class='tips-message'>
+  <image src='../../images/recruit/tipIcon.png' class='tipIcon'></image>
+  <swiper class='tip-swiper' vertical='true' autoplay='true' circular='true' interval='3000'>
+    <block wx:for="{{infoList}}" wx:key="id">
+      <swiper-item>
+        <text>{{item.content}}</text>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<i-row i-class="functionList">
+  <i-col span="6" ><view class='functionItem' bindtap='toCheckTask'>查作业</view></i-col>
+  <i-col span="12" ><view class='functionItem' id='signIn' bindtap='toSignIn'>签到</view></i-col>
+  <i-col span="6" ><view class='functionItem' bindtap='toCheckGrade'>查成绩</view></i-col>
+</i-row>
+
+<view class='bottomContainerSignIn'  wx:if="{{useFunction == 'signIn'}}">
+  <input type='number' class='signInCodeInput' maxlength='4' bindinput='inputSignInCode'></input>
+  <button class='signInButton' hover-class='signInButtonHover' bindtap='sendSignInCode'>点击签到</button>
+</view>
+
+<view class='bottomContainer' wx:elif="{{useFunction == 'checkTask'}}">
+ <block wx:for="{{homeworkList}}" wx:for-item="homework" wx:key="{{homework.id}}">
+    <i-card title="{{homework.title}}" extra="{{homework.deadline}}" thumb="../../images/recruit/homework.png" full="true">
+      <view slot="content">{{homework.content}}</view>
+      <view slot="footer"></view>
+    </i-card>
+ </block>
+</view>
+
+<view class='bottomContainer' wx:elif="{{useFunction == 'checkGrade'}}">
+  <block wx:for="{{gradeList}}" wx:for-item="grade" wx:key="{{grade.id}}">
+    <i-card title="{{grade.title}}" extra="{{grade.score}}" thumb="../../images/recruit/grade.png" full="true">
+      <view slot="content">评价：{{grade.comment}}</view>
+      <view slot="footer"></view>
+    </i-card>
+ </block>
+</view>

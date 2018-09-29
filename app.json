@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/start/start",
+    "pages/bind/bind",
+    "pages/home/home",
+    "pages/recruit/recruit",
+    "pages/mine/mine",
+    "pages/direction/direction"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#518FF5",
+    "navigationBarTitleText": "Mis Lab",
+    "navigationBarTextStyle":"white",
+    "backgroundColor":"#EFEFEF"
+  },
+  "tabBar": {
+    "color": "#B3B3B3",
+    "selectedColor": "#518FF5",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/images/tabbar/home.png",
+        "selectedIconPath": "/images/tabbar/home-active.png"
+      },
+      {
+        "pagePath": "pages/direction/direction",
+        "text": "方向",
+        "iconPath": "/images/tabbar/direction.png",
+        "selectedIconPath": "/images/tabbar/direction-active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/tabbar/mine.png",
+        "selectedIconPath": "/images/tabbar/mine-active.png"
+      }
+    ]
+  }
+}

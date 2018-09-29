@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class='topPanel'>
+  <text class='directionTitle'>前端</text>
+</view>
+<image src='../../images/recruit/web.png' class='topImg'></image>
+<view class="{{spread?'introduceContainerOn':'introduceContainer'}}">
+  <text class='introduce'>{{introduce}}</text>
+</view>
+<button class='downButton' bindtap='spreadTap'>
+  <view class='iconContainer' animation="{{spinAnimation}}">
+  <image src='../../images/icons/down.png' class='downIcon' animation="{{downAnimation}}"></image>
+  </view>
+</button>
+<i-tabs current="{{ tabCurrent }}" color="#518FF5" bindchange="handleChange">
+    <i-tab key="member" title="人员介绍"></i-tab>
+    <i-tab key="stack" title="技术栈"></i-tab>
+    <i-tab key="share" title="文章分享"></i-tab>
+</i-tabs>
+
+<view class='memberPage' wx:if="{{tabCurrent == 'member'}}">
+  <block wx:for="{{memberList}}" wx:for-item="member" full="true" wx:key="{{member.id}}" >
+    <i-card title="{{member.studentName}}" extra="{{member.studentId}}" thumb="{{member.avatarUrl}}" full="true" i-class="memberItem">
+      <view slot="content"></view>
+      <view slot="footer"></view>
+    </i-card>
+  </block>
+</view>
+
+<view class='stackPage' wx:elif="{{tabCurrent == 'stack'}}">
+  <block wx:for="{{stackList}}" wx:for-item="stackItem" wx:key="{{stackItem.id}}">
+    <view class='stackItem'>
+      <image class='stackItemImage' src='{{stackItem.url}}'></image>
+      <text class='stackItemTitle'>{{stackItem.title}}</text>
+    </view>
+  </block>
+</view>

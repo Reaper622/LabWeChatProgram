@@ -1,0 +1,11 @@
+<view class='activity-container'>
+  <image src="{{url}}" class="activity-img"></image>
+  <view class="activity-content">
+    <text class="activity-title">{{title}}\n</text>
+    <image src='/images/noticeBoard/time.png' class='activity-timeIcon'></image>
+    <text class="activity-time">\t{{time}}\n</text>
+    <image src='/images/noticeBoard/pos.png' class='activity-posIcon'></image>
+    <text class="activity-address">\t{{address}}</text>
+  </view>
+<text class='activity-people'  wx:if="{{number > 0}}"> {{number}} 人已报名</text>
+</view>

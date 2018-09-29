@@ -1,0 +1,109 @@
+/* pages/recruit/recruit.wxss */
+
+.topBar{
+  height: 100rpx;
+  background-color: #24292E;
+}
+.directionWord{
+  color: white;
+  line-height: 100rpx;
+}
+.iconContainerNormal{
+  margin-top: 10rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  border:5rpx solid white;
+}
+.iconContainerOn{
+  margin-top: 10rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  border:5rpx solid #518FF5;
+}
+.noticeBoard{
+  position: absolute;
+  top: 110rpx;
+  width: 750rpx;
+  height: 300rpx;
+  background: #ffffff;
+
+}
+.tips-message{
+  width: 750rpx;
+  height: 100rpx;
+  background: white;
+  margin-top: 320rpx;
+  border-top:5rpx solid #518FF5;
+  border-bottom: 5rpx solid #518FF5;
+}
+.tip-swiper{
+  margin-left: 120rpx;
+  width: 500rpx;
+  height: 100rpx;
+  font-size: 30rpx;
+  line-height: 100rpx;
+}
+.tipIcon{
+  width: 50rpx;
+  height: 50rpx;
+  float: left;
+  margin-top: 25rpx;
+  margin-left: 50rpx;
+}
+.functionList{
+  background: #518FF5;
+  height: 100rpx;
+  margin-top: 20rpx;
+}
+.functionItem{
+  height: 100rpx;
+  color: white;
+  text-align: center;
+  line-height: 100rpx;
+}
+#signIn{
+  border-left: 3rpx solid white;
+  border-right: 3rpx solid white;
+}
+.bottomContainer{
+  margin-top:10rpx;
+  width: 750rpx;
+  height: auto;
+  background: white;
+}
+.bottomContainerSignIn{
+  margin-top:10rpx;
+  width: 750rpx;
+  height: 500rpx;
+  background: white;
+}
+.signInCodeInput{
+  position: relative;
+  width: 300rpx;
+  height: 100rpx;
+  top: 100rpx;
+  margin-left: 195rpx;
+  font-size: 100rpx;
+  line-height: 100rpx;
+  border: 5rpx solid #518FF5;
+  border-radius: 5rpx;
+  padding-left: 60rpx;
+}
+.signInButton{
+  position: relative;
+  width: 200rpx;
+  text-align: center;
+  top: 150rpx;
+  background-color: #518FF5;
+  color: white;
+}
+.signInButtonHover{
+  position: relative;
+  width: 200rpx;
+  text-align: center;
+  top: 150rpx;
+  background-color: rgb(49, 115, 221);
+  color: white;
+}

@@ -1,0 +1,50 @@
+/* pages/mine/mine.wxss */
+.topContainer{
+  position: relative;
+  width: 750rpx;
+  height: 400rpx;
+  background: #fff;
+}
+.userAvatar{
+  position: absolute;
+  width: 160rpx;
+  height: 160rpx;
+  top: 30rpx;
+  left: 40rpx;
+  border-radius: 20rpx;
+}
+.username{
+  position: absolute;
+  top: 80rpx;
+  left: 250rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.id{
+  position: absolute;
+  top: 140rpx;
+  left: 250rpx;
+}
+.lists{
+  position: absolute;
+  width: 750rpx;
+  height: auto;
+  bottom: 0;
+  border-top: 5rpx solid #6E737C;
+}
+.gender{
+  position: absolute;
+  top: 210rpx;
+  left: 40rpx;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  color: gray;
+}
+.direction{
+  position: absolute;
+  top: 210rpx;
+  left: 250rpx;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  color: gray;
+}

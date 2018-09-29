@@ -1,0 +1,93 @@
+/* pages/bind/bind.wxss */
+
+.topImg{
+  width: 750rpx;
+  height: 250rpx;
+}
+.inputContainer{
+  width: 750rpx;
+  height: 300rpx;
+  margin-top: 100rpx;
+}
+.list{
+  width:750rpx;
+  height: 100rpx;
+  margin-bottom: 50rpx;
+}
+.list text{
+  font-size: 40rpx;
+  margin-left: 100rpx;
+  margin-right: 70rpx;
+  float: left;
+}
+.list input{
+  display: inline-block;
+  width: 400rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 5rpx solid #518FF5;
+  font-size: 40rpx;
+  padding-left: 40rpx;
+  border-radius: 10rpx;
+  background: white;
+}
+.directionTitle{
+  width: 750rpx;
+  height: 50rpx;
+  font-size: 40rpx;
+  text-align: center;
+}
+.directionList{
+  width: 750rpx;
+  height: 300rpx;
+}
+.directionItem{
+  position: relative;
+  display: inline-block;
+  width: 200rpx;
+  height: 260rpx;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  margin-top: 20rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.directionItemOn{
+  position: relative;
+  display: inline-block;
+  width: 200rpx;
+  height: 260rpx;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  margin-top: 20rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0 0 20rpx #518FF5;
+}
+.directionItemImage{
+  position: absolute;
+  width: 150rpx;
+  height: 150rpx;
+  left: 22rpx;
+  top: 20rpx;
+  border: 3rpx solid gray;
+  border-radius: 30rpx;
+}
+.directionItemText{
+  position: absolute;
+  width: 200rpx;
+  top: 180rpx;
+  font-size: 40rpx;
+  text-align: center;
+  color: black;
+}
+.bottomContainer{
+  display: flex;
+  align-items: center;
+  margin-top: 350rpx;
+}
+.bindButton{
+  background-color: #518ff5;
+  color:white;
+  word-spacing: 20rpx;
+}

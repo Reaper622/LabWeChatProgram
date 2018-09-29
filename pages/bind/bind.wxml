@@ -1,0 +1,25 @@
+<!--pages/bind/bind.wxml-->
+<image src='../../images/mislab.png' class='topImg'></image>
+
+<view class='inputContainer'>
+  <view class='list'>
+    <text>姓名</text>
+    <input type='text' bindinput='usernameInput'></input>
+  </view>
+  <view class='list'>
+    <text>学号</text>
+    <input type='number' bindinput='idInput' maxlength='10'></input>
+  </view>
+  <view class='directionTitle' animation="{{titleAnimation}}">请选择学习方向</view>
+  <view class='directionList'>
+    <view class="{{current == direction.toSend? 'directionItemOn':'directionItem'}}" wx:for="{{directionItems}}" wx:for-item="direction" wx:key="{{direction.id}}" bindtap='changeDirection' data-content="{{direction.toSend}}"  >
+      <image src='{{direction.url}}' class='directionItemImage'></image>
+      <text class='directionItemText'>{{direction.text}}</text>
+    </view>
+  </view>
+
+</view>
+
+<view class='bottomContainer'>
+  <button class='bindButton' bindtap='bindEvent'>绑 定</button>
+</view>

@@ -1,0 +1,98 @@
+/* pages/home/home.wxss */
+.topContainer{
+  position: relative;
+  width: 750rpx;
+  height: 300rpx;
+}
+.topImgContainer{
+  position: absolute;
+  width: 750rpx;
+  height: 300rpx;
+}
+.topImg{
+  width: 750rpx;
+  height: 300rpx;
+}
+.functionContainer{
+  position: relative;
+  width: 750rpx;
+  height: 410rpx;
+  margin-top: 10rpx;
+  background-color: #EFEFEF;
+}
+.functionItem{
+  position: relative;
+  display: inline-block;
+  width:350rpx;
+  height: 180rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  margin-top: 10rpx;
+  margin-bottom: 5rpx; 
+  border-radius: 15rpx;
+}
+#recruitFunction{
+  background: #E5FFF3;
+}
+#todo1Function{
+  background: #FFFFFF;
+}
+#todo2Function{
+  background: #FFFFFF;
+}
+#moreFunction{
+  background: #E5FFF3;
+}
+.functionItem image{
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+  padding: 10rpx 10rpx;
+  border-radius: 60rpx;
+  left: 30rpx;
+  top: 35rpx;
+  background: #518FF5;
+}
+.functionItem text{
+  position: absolute;
+  width: 220rpx;
+  height: 180rpx;
+  font-size: 45rpx;
+  text-align: center;
+  left: 130rpx;
+  line-height: 180rpx;
+}
+
+.directionContainer{
+  position: relative;
+  width: 750rpx;
+  height: 300rpx;
+  background: #EFEFEF;
+  margin-top: 10rpx;
+}
+.directionItem{
+  position: relative;
+  display: inline-block;
+  width: 230rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  height: 300rpx;
+  background: #FFFFFF;
+  border-radius: 10rpx;
+}
+.directionItem image{
+  position: absolute;
+  width: 150rpx;
+  height: 150rpx;
+  top: 20rpx;
+  margin-left:40rpx;
+  box-shadow: 0 0 10rpx #518FF5;
+}
+.directionItem text{
+  position: absolute;
+  width: 230rpx;
+  text-align: center;
+  top: 200rpx;
+  font-weight: bold;
+}
+

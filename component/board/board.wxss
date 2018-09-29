@@ -1,0 +1,70 @@
+.activity-container{
+  width:750rpx;
+  height:100%;
+  background:rgba(255,255,255,1);
+  border-bottom: 1rpx solid rgb(219, 218, 218);
+}
+.activity-img{
+  position: relative;
+  top: 37rpx;
+  left: 30rpx;
+  width: 250rpx;
+  height: 180rpx;
+  overflow: hidden;
+  display: inline-block;
+}
+.activity-content{
+  position: relative;
+  display: inline-block;
+  background-color: #FFFFFF;
+  width: 325rpx;
+  height: 150rpx;
+  left: 100rpx;
+  top: 20rpx;
+}
+.activity-title{
+  position: relative;
+  width: 325rpx;
+  height: 30rpx;
+  font-size: 30rpx;
+  font-family:SourceHanSansCN-Regular;
+}
+.activity-timeIcon{
+  position: relative;
+  width: 22rpx;
+  height: 22rpx;
+  left: 0rpx;
+}
+.activity-posIcon{
+  position: relative;
+  width: 20rpx;
+  height: 26rpx;
+  left: 0rpx;
+}
+.activity-time{
+  position: relative;
+  width: 325rpx;
+  height: 22rpx;
+  font-size: 22rpx;
+  color: #989898;
+  font-family:SourceHanSansCN-Regular;
+}
+.activity-address{
+  position: relative;
+  width: 325rpx;
+  height: 22rpx;
+  font-size: 22rpx;
+  color: #989898;
+  font-family:SourceHanSansCN-Regular;
+}
+.activity-people{
+  position: relative;
+  top: 65rpx;
+  left: 60rpx;
+  width: 115rpx;
+  height: 22rpx;
+  font-size: 22rpx;
+  color: #989898;
+  font-weight: bold;
+  font-family:SourceHanSansCN-Regular;
+}

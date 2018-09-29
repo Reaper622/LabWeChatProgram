@@ -1,0 +1,5 @@
+<!--pages/start/start.wxml-->
+<open-data type="userAvatarUrl" class="avatar"></open-data>
+<view class='buttonContainer'>
+<button  class='loginButton' size='default' bindgetuserinfo='bindGetUserInfo' open-type='getUserInfo'>登录授权</button>
+</view>
