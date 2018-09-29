@@ -9,13 +9,15 @@
         <result property="openId" column="open_id"/>
         <result property="createTime" column="create_time"/>
         <result property="updateTime" column="updateTime"/>
+        <result property="major" column="major"/>
+        <result property="avatarUrl" column="avatar_url"/>
     </resultMap>
 <sql id="user_columns">
-    open_id, student_id, student_name, id, create_time, update_time
+    open_id, student_id, student_name, id, create_time, update_time,major,avatar_url
 </sql>
     <insert id="insertUser" parameterType="org.mislab.mislabwechat.entity.po.User" keyProperty="id" useGeneratedKeys="true">
-        INSERT INTO user (open_id, student_id, student_name, create_time, update_time)
-        VALUES (#{openId}, #{studentId}, #{studentName}, CURRENT_TIME, CURRENT_TIME)
+        INSERT INTO user (open_id, student_id, student_name, create_time, update_time,major,avatar_url)
+        VALUES (#{openId}, #{studentId}, #{studentName}, CURRENT_TIME, CURRENT_TIME, #{major}, #{avatarUrl})
     </insert>
 
     <select id="findUserByOpenId" parameterType="java.lang.String" resultMap="user">
@@ -23,4 +25,16 @@
         FROM user
         WHERE open_id = #{openId}
     </select>
+
+    <select id="getUserByMajor" parameterType="java.lang.String" resultMap="user">
+        SELECT <include refid="user_columns"/>
+        FROM user
+        WHERE major = #{major}
+        ORDER BY student_id
+    </select>
+
+    <delete id="deleteUser" parameterType="java.lang.String">
+        DELETE FROM user
+        WHERE open_id = #{openId}
+    </delete>
 </mapper>

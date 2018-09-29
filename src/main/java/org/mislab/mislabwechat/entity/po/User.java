@@ -4,10 +4,6 @@ import lombok.Data;
 
 import java.util.Date;
 
-/**
- * 用户类
- * openId,学号,姓名
- */
 @Data
 public class User {
     private int id;
@@ -16,4 +12,6 @@ public class User {
     private String studentName;
     private Date createTime;
     private Date updateTime;
+    private String major;
+    private String avatarUrl;
 }

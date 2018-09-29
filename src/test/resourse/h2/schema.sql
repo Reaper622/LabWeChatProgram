@@ -49,7 +49,7 @@ CREATE TABLE `task` (
   `task_id` int(11) NOT NULL AUTO_INCREMENT,
   `student_id` bigint(20) NOT NULL,
   `student_name` varchar(255) NOT NULL,
-  `creat_time` datetime NOT NULL,
+  `create_time` datetime NOT NULL,
   `update_time` datetime NOT NULL,
   `task` varchar(255) NOT NULL,
   `classify` varchar(255) NOT NULL,
@@ -65,7 +65,9 @@ CREATE TABLE `user` (
   `student_id` bigint(20) NOT NULL,
   `student_name` varchar(255) NOT NULL,
   `id` int(11) NOT NULL,
-  `creat_time` datetime NOT NULL,
-  `update_time` datetime NOT NULL,
-  PRIMARY KEY (`id`)
+  `create_time` datetime,
+  `update_time` datetime,
+  `major` varchar(255) NOT NULL,
+  `avatar_url` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`open_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
