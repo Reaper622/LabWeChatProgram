@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="org.mislab.mislabwechat.dao.SignerMapper">
+    <resultMap id="user" type="org.mislab.mislabwechat.entity.po.Signer">
+        <id property="id" column="id"/>
+        <result property="signId" column="sign_id"/>
+        <result property="studentName" column="student_name"/>
+        <result property="studentId" column="student_id"/>
+    </resultMap>
+<sql id="signer_columns">
+    sign_id, student_name, student_id
+</sql>
+    <insert id="insertSigner" parameterType="org.mislab.mislabwechat.entity.po.Signer" keyProperty="id" useGeneratedKeys="true">
+        INSERT INTO signer(sign_id, student_name, student_id)
+        VALUES (#{signId}, #{studentName}, #{studentId})
+    </insert>
+</mapper>

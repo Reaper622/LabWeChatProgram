@@ -6,6 +6,9 @@ import org.mislab.mislabwechat.manager.UserManager;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 @Component
@@ -27,4 +30,5 @@ public class UserManagerImpl implements UserManager{
         List<User> list = userMapper.getUserByMajor(major);
         return list;
     }
+
 }

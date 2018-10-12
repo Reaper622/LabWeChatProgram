@@ -7,4 +7,5 @@ import java.util.List;
 public interface UserManager {
     User getUserInfo(String openId);
     List<User> getUserByMajor(String major);
+
 }
